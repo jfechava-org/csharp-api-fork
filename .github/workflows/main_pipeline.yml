@@ -1,0 +1,50 @@
+name: main_pipeline
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build application
+        run: |
+          # build your application here
+          echo "Building application..."
+          sleep 15
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          # install any dependencies needed for testing
+          echo "Installing dependencies..."
+          sleep 15
+
+      - name: Run tests
+        run: |
+          # run your tests here
+          echo "Running tests..."
+          sleep 15
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy application
+        run: |
+          # deploy your application here
+          echo "Deploying application..."
+          sleep 15
