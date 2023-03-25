@@ -11,3 +11,16 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+  
+  run-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10
+      - run: echo building
+      
+  run-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10
+      - run: echo deploying 
+     
