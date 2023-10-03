@@ -36,7 +36,7 @@ jobs:
         run: dotnet publish -c Release -o publish
 
       - name: Build Docker Image
-        uses: docker/build-push-action@v5.0.0v5.0.0
+        uses: docker/build-push-action@v5.0.0
         with:
           context: ./myMicroservice
           file: ./myMicroservice/Dockerfile
