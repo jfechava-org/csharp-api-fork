@@ -45,9 +45,10 @@ jobs:
       - name: Build Docker Image
         uses: docker/build-push-action@v5.0.0
         with:
-          context: .
+          context: ..
           file: ./Dockerfile
           platforms: linux/amd64  # Adjust architecture as needed
+          push: false
 
 
   test:
