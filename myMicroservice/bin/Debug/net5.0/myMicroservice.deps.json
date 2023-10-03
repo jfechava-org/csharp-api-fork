@@ -1,6 +1,6 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v5.0",
+    "name": ".NETCoreApp,Version=v6.0",
     "signature": ""
   },
   "compilationOptions": {
@@ -8,7 +8,7 @@
       "TRACE",
       "DEBUG",
       "NET",
-      "NET5_0",
+      "NET56_0",
       "NETCOREAPP"
     ],
     "languageVersion": "9.0",
@@ -22,10 +22,10 @@
     "debugType": "portable"
   },
   "targets": {
-    ".NETCoreApp,Version=v5.0": {
+    ".NETCoreApp,Version=v6.0": {
       "myMicroservice/1.0.0": {
         "dependencies": {
-          "Swashbuckle.AspNetCore": "5.6.3",
+          "Swashbuckle.AspNetCore": "6.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
