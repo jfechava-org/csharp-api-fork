@@ -41,6 +41,7 @@ jobs:
           context: ./myMicroservice
           file: ./myMicroservice/Dockerfile
           platforms: linux/amd64  # Adjust architecture as needed
+          labels: latest
           push: true
 
       - name: Set up Google Cloud CLI
