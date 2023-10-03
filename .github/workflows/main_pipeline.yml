@@ -42,7 +42,7 @@ jobs:
           file: ./myMicroservice/Dockerfile
           platforms: linux/amd64  # Adjust architecture as needed
           tags: latest
-          push: true
+          push: false
 
       - name: Set up Google Cloud CLI
         run: |
