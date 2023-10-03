@@ -30,9 +30,6 @@ jobs:
       - name: Test Microservice
         run: dotnet test
 
-      - name: Publish Artifact
-        if: success()
-        run: dotnet publish -c Release -o publish
 
 
   test:
