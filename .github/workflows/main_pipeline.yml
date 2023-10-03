@@ -3,7 +3,8 @@ name: main_pipeline
 on:
   push:
     branches:
-      - master
+      - main
+      - 'feature/**'
 
 jobs:
   build:
@@ -26,7 +27,7 @@ jobs:
           echo "Building application..."
           dotnet build --configuration Release
           
-          
+
 
   test:
     runs-on: ubuntu-latest
