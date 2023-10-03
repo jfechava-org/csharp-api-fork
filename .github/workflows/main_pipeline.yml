@@ -26,7 +26,13 @@ jobs:
           # build your application here
           echo "Building application..."
           dotnet build --configuration Release
-          
+  
+      - name: Test Microservice
+        run: dotnet test
+
+      - name: Publish Artifact
+        if: success()
+        run: dotnet publish -c Release -o publish
 
 
   test:
