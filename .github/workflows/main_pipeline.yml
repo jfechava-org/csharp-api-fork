@@ -30,6 +30,18 @@ jobs:
       - name: Test Microservice
         run: dotnet test
 
+    
+      - name: Publish Artifact
+        if: success()
+        run: dotnet publish -c Release -o publish
+
+      - name: Upload Artifact
+        if: success()
+        uses: actions/upload-artifact@v2
+        with:
+          name: microservice-artifact
+          path: ./publish  
+
 
 
   test:
