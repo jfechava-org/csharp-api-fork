@@ -47,7 +47,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          #platforms: linux/amd64  # Adjust architecture as needed
+          platforms: linux/amd64  # Adjust architecture as needed
 
 
   test:
