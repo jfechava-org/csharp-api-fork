@@ -8,7 +8,8 @@ on:
 
 jobs:
   build:
-    runs-on: 'windows-2019'
+    #runs-on: 'windows-2019'
+    runs-on: 'ubuntu-20.04'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -46,7 +47,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64  # Adjust architecture as needed
+          #platforms: linux/amd64  # Adjust architecture as needed
 
 
   test:
