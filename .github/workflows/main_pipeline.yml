@@ -44,7 +44,7 @@ jobs:
           push: true
 
       - name: Set up Google Cloud CLI
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@main
         with:
           service_account_key: 'bdab3f80aa4dc5d33ec49a9b712a1915fea5f775'   #${{ secrets.GCP_SA_KEY }}
           project_id: 'github-workflows-400912'   #${{ secrets.GCP_PROJECT_ID }}
