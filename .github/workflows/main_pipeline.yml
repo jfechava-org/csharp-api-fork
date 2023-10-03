@@ -35,6 +35,13 @@ jobs:
         if: success()
         run: dotnet publish -c Release -o publish
 
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCLOUD_SA_KEY }}
+          export_default_credentials: true
       #- name: Upload Artifact
       #  if: success()
       #  uses: actions/upload-artifact@v2
@@ -48,7 +55,8 @@ jobs:
           context: ./myMicroservice
           file: ./myMicroservice/Dockerfile
           platforms: linux/amd64  # Adjust architecture as needed
-          push: false
+          push: true
+
 
 
   test:
